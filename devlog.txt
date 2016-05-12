@@ -12,12 +12,13 @@ Day 1: 5/11/16
 Day 2: 5/12/16
 	- Created a dev log!
 	- Researched different ways to create JSON objects in java
-	- Completed working code to parse JSON file from url by replacing jar file
+	- Completed working code to read JSON file from url by replacing jar file
 	
 	Resources:
 	- New JSON API: https://github.com/stleary/JSON-java
-	- Info on parsing JSON from url in java: http://stackoverflow.com/questions/4308554/simplest-way-to-read-json-from-a-url-in-java
+	- Info on reading a JSON file from url in java: http://stackoverflow.com/questions/4308554/simplest-way-to-read-json-from-a-url-in-java
 	
 	To-Do:
 	- Look into: http://www.oracle.com/technetwork/articles/java/json-1973242.html for built-in java solution
+	- parse JSON object into correct format and into JSON Array objects
 	- Use parsed JSON data for a purpose in code/ test its functionality
