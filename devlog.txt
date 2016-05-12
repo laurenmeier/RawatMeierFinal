@@ -1,0 +1,13 @@
+Development Log
+
+Day 1: 5/11/16
+- Created git repository and eclipse project
+- Linked the repository to a remote GitHub repository
+- Researched how JSON works and how simple examples work in JAVA
+- found sources of public data available online
+
+To-Do: 
+- Get a working copy of code to read in a JSON file from a url 
+
+Day 2: 5/12/16
+- Created a dev log!
