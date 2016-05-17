@@ -9,8 +9,18 @@ public class JsonTutorial {
 	
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://data.sfgov.org/api/views/w969-5mn4/rows.json?accessType=DOWNLOAD");
-			InputStream urlInputStream = url.openConnection().getInputStream();
+			String inputData = readJSONString("https://data.sfgov.org/api/views/w969-5mn4/rows.json?accessType=DOWNLOAD");
+			JSONObject data = new JSONObject(inputData);
+			System.out.println(data.toString());
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public static String readJSONString(String url) {
+		try {
+			URL dataUrl = new URL(url);
+			InputStream urlInputStream = dataUrl.openConnection().getInputStream();
 			
 			BufferedReader streamReader = new BufferedReader(new InputStreamReader(urlInputStream, "UTF-8")); 
 			StringBuilder responseStrBuilder = new StringBuilder();
@@ -18,10 +28,10 @@ public class JsonTutorial {
 			String inputStr;
 			while ((inputStr = streamReader.readLine()) != null)
 			    responseStrBuilder.append(inputStr);
-			JSONObject data = new JSONObject(responseStrBuilder.toString());
-			System.out.println(data.toString());
+			return responseStrBuilder.toString();
 		} catch (Exception e) {
-			System.out.println(e);
+			System.err.println(e);
 		}
+		return "";
 	}
 }
