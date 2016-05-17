@@ -1,5 +1,8 @@
 Development Log
 
+Brainstorm Ideas (What to do with public data):
+	- 
+
 Day 1: 5/11/16
 	- Created git repository and eclipse project
 	- Linked the repository to a remote GitHub repository
@@ -22,3 +25,17 @@ Day 2: 5/12/16
 	- Look into: http://www.oracle.com/technetwork/articles/java/json-1973242.html for built-in java solution
 	- parse JSON object into correct format and into JSON Array objects
 	- Use parsed JSON data for a purpose in code/ test its functionality
+	
+Day 3: 5/17/16
+	- Explored the hierarchy of JSON data taken from the Internet
+	- used exploration techniques to differentiate each level of data between an object and an array
+	- Researched to understand how JSON data is structured
+	
+	Resources:
+	- JSON simple info: https://code.google.com/archive/p/json-simple/
+	- Project to compare to: https://github.com/maticlikar/LikarSandovalFinal/blob/master/src/Main.java
+	
+	To-Do:
+	- Print all data with correct structure and order
+	- Understand classmate's project and how it works
+	- Find difference between JSONObject and JSONArray
