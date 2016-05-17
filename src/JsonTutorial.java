@@ -16,8 +16,9 @@ public class JsonTutorial {
 			String inputData = readJSONString("https://data.sfgov.org/api/views/w969-5mn4/rows.json?accessType=DOWNLOAD");
 			JSONObject obj = (JSONObject) parser.parse(inputData);
 			JSONArray data = (JSONArray)obj.get("data");
-			
-			for (Object key : data) {
+			JSONArray arrayData = (JSONArray) data.get(0);
+			JSONArray addresscomponent = (JSONArray) arrayData.get(16);
+			for (Object key : addresscomponent) {
 				System.out.println(key);
 			}
 			
