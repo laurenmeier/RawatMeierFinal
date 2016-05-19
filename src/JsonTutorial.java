@@ -13,17 +13,17 @@ public class JsonTutorial {
 	public static void main(String[] args) {
 		try {
 			JSONParser parser = new JSONParser();
-			String inputData = readJSONString("https://data.sfgov.org/api/views/w969-5mn4/rows.json?accessType=DOWNLOAD");
-			JSONObject obj = (JSONObject) parser.parse(inputData);
-			JSONArray data = (JSONArray)obj.get("data");
-			JSONArray arrayData = (JSONArray) data.get(0);
-			JSONArray addresscomponent = (JSONArray) arrayData.get(16);
-			for (Object key : addresscomponent) {
-				System.out.println(key);
+			String inputData = readJSONString("https://data.sfgov.org/resource/bbb8-hzi6.json");
+			Object obj = parser.parse(inputData);
+			JSONArray array = (JSONArray) obj;
+			for (int i = 0; i < array.size(); i++) {
+				JSONObject obj2 = (JSONObject) array.get(i);
+				System.out.println("applicant: " + obj2.get("applicant"));
+				for (Object key: obj2.keySet()) {
+					if (!key.equals("applicant")) System.out.println(key + ": " + obj2.get(key));
+				}
+				System.out.println();
 			}
-			
-			//JSONArray array = (JSONArray) obj;
-//			System.out.println(array.toString());
 		} catch (Exception e) {
 			System.out.println(e);
 		}
